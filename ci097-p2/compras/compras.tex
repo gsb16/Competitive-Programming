@@ -1,0 +1,69 @@
+Está chegando a grande final do Campeonato Nlogonense de Surf Aquático.
+Ano que vem, a final ocorrerá na cidade de Foça do Iguachim (FdI)!
+A região de FdI e das cidades próximas é famosa por seu comércio, composto por diversas lojas
+que costumam vender diversos produtos a preços mais atraentes que no restante do
+país. Você quer aproveitar a viagem para FdI para comprar o novo celular
+\textit{Aifôni (R)}!\footnote{Na verdade, você queria um \textit{Sãosunga (R)},
+mas este celular é um verdadeiro estouro!}
+
+Existem $N$ lojas na região, numeradas de $1$ a $N$. Todas as lojas vendem o
+celular, embora o preço do aparelho pode ser diferente em cada loja. Para não
+tornar sua viagem cansativa, você pode considerar não visitar todas as $N$
+lojas, mas sim visitar apenas as lojas entre duas dadas lojas $i$ e $j$, inclusive.
+Você está interessado na \textit{maior diferença de preços} do aparelho entre as
+lojas visitadas. A diferença é dada por $|M - m|$, onde $M$ é o maior preço
+dentre as lojas visitadas, e $m$ é o menor.
+
+Além disso, as lojas podem alterar o preço do celular como desejarem! Sua tarefa
+é determinar, \textit{para várias consultas}, a maior diferença de preços nas
+lojas entre duas dadas lojas, considerando também eventuais alterações de preços nas lojas.
+
+\subsection*{Entrada}
+
+A primeira linha contém o inteiro $N$ ($1 \leq N \leq 10^5$). A segunda linha
+contém $N$ inteiros $p_1, p_2, ..., p_N$ ($1 \leq p_i \leq 10^5$). O inteiro
+$p_i$ indica o preço inicial do celular na loja $i$.
+A terceira linha contém um inteiro $Q$ ($1 \leq Q \leq 10^5$), o número de
+operações. As próximas $Q$ linhas descrevem uma operação cada. Cada operação
+pode ser descrita de duas formas:
+
+\begin{itemize}
+    \item $1$ $i$ $p$ ($1 \leq i \leq N, 1 \leq p \leq 10^5$),
+    indicando que o preço do celular foi alterado para $p$ na loja $i$.
+    \item $2$ $i$ $j$ ($1 \leq i \leq j \leq N$), indicando uma consulta.
+\end{itemize}
+
+\subsection*{Saída}
+
+Para cada consulta, imprima uma linha contendo a maior diferença de preços das
+lojas entre as lojas $i$ e $j$, inclusive.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4
+100 150 90 170
+3
+2 1 3
+1 2 50
+2 2 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+60
+120
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

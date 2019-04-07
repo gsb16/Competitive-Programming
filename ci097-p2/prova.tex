@@ -1,0 +1,154 @@
+\documentclass[12pt,oneside]{article} % Uma Coluna e lingua portuguesa
+%\usepackage[T1]{fontenc}        % Permite digitar os acentos de forma normal
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[portuges,brazil]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphicx}    % Permite Gráficos
+%\usepackage{times}    % Fonte Times
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{nomencl}    % glossario
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\usepackage{wrapfig}
+
+%=======================================================================
+
+% Hifenização das palavras desconhecidas pelo LaTeX
+%\hyphenation{}
+\paperheight    297mm
+\paperwidth     210mm
+\voffset         -15mm
+\headheight      15pt %% tamanho de letra
+\headsep         5mm  %% para o início do texto
+\oddsidemargin  -3.0mm
+\evensidemargin -3.0mm
+\textwidth      167.0mm
+\topmargin      005.0mm
+\textheight     240.0mm
+\footskip       10.0mm
+
+\title{CI097 - Prova 1}
+
+\author{Maratona de Programação}
+\date{19 de Outubro de 2016}
+\usepackage{indentfirst}
+\usepackage{subfig}
+
+\parindent=0pt
+\setlength{\parskip}{7pt plus 1pt minus 2pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Huge CI097 - Prova 2}\\
+\vspace{0.2cm}
+\textit{19 de Outubro de 2016} \\
+\vspace{1.0cm}
+\textbf{Servidor BOCA:} \\
+\texttt{\large http://maratona.c3sl.ufpr.br/} \\
+\vspace{1.0cm}
+\end{center}
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.7pt}
+\renewcommand{\headrulewidth}{0.7pt}
+\lhead{CI097 - Prova 2}
+%\chead{Maratonas de Programação}
+\rhead{19 de Outubro de 2016}
+\cfoot{\thepage}
+
+
+% Espaco para o create-zips.sh nao achar
+  \section*{Instruções Importantes}
+
+\begin{itemize}
+
+    \item A prova é composta por 5 problemas que valem 20 pontos cada, e um
+    problema bônus que também vale 20 pontos.
+
+    \item O problema F é um problema bônus, usado em uma seletiva mas que não foi resolvido.
+    Este problema só deve ser considerado caso todos os demais forem resolvidos.
+
+    \item Se sua solução para um problema for aceita, a nota integral
+    do problema é garantida.
+
+    \item Se sua solução não for aceita, o professor irá avaliar sua última (mas
+            \textbf{apenas} a última) submissão para o problema e atribuir a ela uma
+    nota parcial, considerando a corretude do algoritmo utilizado, a
+    complexidade computacional do algoritmo, o uso correto de funções e estruturas de dados
+    disponíveis utilizadas, e eventuais detalhes da solução.
+
+    \item Em cada problema, cada arquivo de entrada contém \textit{apenas um} caso de
+    teste. Sua solução será executada com vários arquivos de entrada
+    separadamente.
+
+    \item Sua solução será compilada ou executada com a seguinte linha de comando:
+    \begin{itemize}
+        \item C: \verb|gcc -static -O2 -lm|
+        \item C++: \verb|g++ -static -O2 -lm|
+        \item C++11: \verb|g++ -std=c++11 -static -O2 -lm|
+        \item Java: \verb|javac|
+        \item Pascal: \verb|fpc -Xt -XS -O2|
+        \item Python: \verb|python3|
+    \end{itemize}
+
+    \item O tempo limite para a execução de sua solução é de 1 segundo para
+    todos os seis problemas da prova.
+
+    \item Todas as linhas, tanto na entrada quanto na saída, terminam com o
+    caractere de fim-de-linha ($\backslash n$), mesmo quando houver apenas uma única
+    linha no arquivo.
+
+    \item Para submissões em \textbf{JAVA}, a classe deverá ter o mesmo nome que
+    o \textit{basename} do problema (leia a linha entre o título e o texto do
+    problema).
+
+\end{itemize}
+
+\newpage
+
+\clearpage
+\section*{A: Viagem para BH} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: viagem.[c|cpp|java|pas|py]\end{verbatim}
+\input{viagem/viagem.tex}
+
+\clearpage
+\section*{B: Pizza antes de BH} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: pizza.[c|cpp|java|pas|py]\end{verbatim}
+\input{pizza/pizza.tex}
+
+\clearpage
+\section*{C: Paodequeijosweeper} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: paodequeijo.[c|cpp|java|pas|py]\end{verbatim}
+\input{paodequeijo/paodequeijo.tex}
+
+\clearpage
+\section*{D: Passeio em FdI} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: passeio.[c|cpp|java|pas|py]\end{verbatim}
+\input{passeio/passeio.tex}
+
+\clearpage
+\section*{E: Compras em FdI} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: compras.[c|cpp|java|pas|py]\end{verbatim}
+\input{compras/compras.tex}
+
+\clearpage
+\section*{F: Desafio das Moedas Prateadas} %tle=1
+\vspace{-0.52cm}
+\noindent \begin{verbatim}Arquivo: desafio.[c|cpp|java|pas|py]\end{verbatim}
+\input{desafio/desafio.tex}
+
+\end{document}

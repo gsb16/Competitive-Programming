@@ -1,0 +1,138 @@
+O \textit{Desafio das Moedas Prateadas} é um esporte individual popular no reino de Diddykongolândia. O campo e as regras do jogo são descritos a seguir.
+
+O campo do jogo consiste em \textit{locais} e \textit{trechos}. Há $N$ locais no
+campo. Um desses locais é o local de \textit{largada}, no qual o jogador inicia o jogo.
+
+Há $M$ trechos no campo. Cada trecho é uma via unidirecional que liga um local do campo a outro local distinto. Os trechos são os únicos meios pelos quais o jogador pode se mover entre os locais do campo. Os trechos do campo são dados de tal forma que:
+
+\begin{itemize}
+    \item é possível ir do local de largada a qualquer outro local usando os trechos;
+    \item é possível ir de qualquer local do campo ao local de largada usando os trechos;
+    \item é impossível sair de um local $l$ e voltar para o mesmo local $l$ sem passar pelo local de largada.
+\end{itemize}
+
+Há também $K$ \textit{moedas prateadas} no jogo. Cada moeda está em um local distinto do campo. Se o jogador chegar a um local que contém uma moeda, o jogador pode coletá-la. Não há moeda no local de largada.
+
+O jogador começa o jogo no local de largada. Uma \textit{volta} é completada pelo jogador quando ele retorna ao local de largada após passar por outro(s) local(is).
+
+O jogador deve completar exatamente três voltas. Se o jogador conseguir coletar todas as moedas de prata antes de completar a última volta, ele vence. Caso contrário, ele perde.
+
+Após analizar o campo de jogo, você descobriu quanto tempo leva para atravessar cada trecho. Agora, você deve descobrir se é possível vencer no campo dado e, em caso positivo, qual o tempo mínimo que você deve levar para vencer. Considere instantâneo o tempo para coletar uma moeda e para atravessar um local (sair de um trecho e entrar em outro adjacente).
+
+
+\subsection*{Entrada}
+
+
+A entrada inicia com uma linha contendo três inteiros $N$, $M$ e $K$ ($2 \leq N
+        \leq 1000, 2 \leq M \leq (N^2 + N - 2)/2, 1 \leq K \leq min\{12, N-1\}$), indicando o número de locais, de trechos e de moedas no campo. Os locais são numerados de 1 a $N$. O local 1 é o local de largada.
+
+As próximas $M$ linhas descrevem os trechos. Cada trecho é descrito por três
+inteiros $l_a$, $l_b$ e $t$ ($1 \leq l_a, l_b \leq N, l_a \neq l_b, 1 \leq t
+        \leq 10^4$), indicando que há um trecho que leva do local $l_a$ para o
+local $l_b$ que é atravessado em $t$ segundos.
+
+A última linha contém $K$ inteiros distintos $k_i$ ($2 \leq k_i \leq N$ para $1 \leq i \leq K$) indicando os locais das moedas prateadas.
+
+\subsection*{Saída}
+
+Se não é possível vencer o jogo, imprima uma linha contendo
+``\verb|impossivel|'' (sem aspas). Caso
+contrário, imprima uma linha contendo o menor tempo necessário, em segundos, para
+vencer o jogo.
+
+\clearpage
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+4 6 3
+1 2 1
+1 3 1
+1 4 1
+2 1 1
+3 1 1
+4 1 1
+2 3 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+6
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5 7 2
+1 2 1
+1 3 2
+2 3 3
+3 4 7
+3 5 3
+4 5 2
+5 1 4
+2 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+35
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5 8 4
+1 2 3
+1 3 2
+1 4 10
+1 5 7
+2 1 5
+3 1 3
+4 1 1
+5 1 12
+4 5 3 2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+impossivel
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

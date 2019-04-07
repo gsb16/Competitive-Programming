@@ -1,0 +1,75 @@
+Está chegando a grande final do Campeonato Nlogonense de Surf Aquático.
+Ano que vem, a final ocorrerá na cidade de Foça do Iguachim (FdI)!
+A cidade é famosa por conter o Parque Nacional do Iguachim, que conta com várias
+atrações. Dentre elas, destacam-se as Cataratas do Iguachim, um dos pontos turisticos
+mais famosos de Nlogonia!
+
+O Parque conta com $N$ atrações, numeradas de $1$ a $N$. As atrações são
+dispostas em uma linha reta no Parque. Desta forma, o Parque pode ser
+descrito como uma rua contendo entradas para as atrações $1$, $2$, ..., $N$, onde a
+atração $1$ é a mais próxima da entrada do Parque, enquanto a atração $N$
+é a mais próxima da saída do Parque. Para não tumultoar o Parque, é
+exigido que as atrações sejam visitadas \textit{em ordem} da entrada para a
+saída, isto é, se você visitar a atração $i$, você não pode voltar e visitar as
+atrações $1$, $2$, ..., $i-1$.
+
+Além disso, existem dois tipos de \textit{tickets} no Parque: os
+\textit{tickets} verdes e os \textit{tickets} amarelos. Cada uma das $N$
+atrações exigem, como pagamento por sua entrada, uma certa quantidade de
+\textit{tickets} de exatamente um tipo. Ao entrar em uma atração, o Parque pode
+lhe presentear com uma certa quantidade de \textit{tickets} do outro tipo, isto
+é, uma atração que cobra \textit{tickets} verdes como entrada pode lhe dar
+\textit{tickets} amarelos como presente, ou vice-versa. Você pode não poder
+entrar em uma atração se não tiver \textit{tickets} suficientes para ela, mas
+também pode optar não entrar nela se quiser, mesmo se tiver \textit{tickets}
+suficientes.
+
+Entretanto, você quer aproveitar o Parque o máximo possível! Dada a quantidade
+inicial de \textit{tickets} de cada tipo que você possui e a descrição das atrações do
+Parque, determine o número máximo de atrações que podem ser visitadas.
+
+\subsection*{Entrada}
+
+A primeira linha contém o inteiro $N$ ($1 \leq N \leq 40$). A segunda linha
+contém dois inteiros $V$ e $A$ ($0 \leq V, A \leq 20$), o número de
+\textit{tickets} verdes e amarelos que você possui inicialmente. As próximas $N$
+linhas descrevem as atrações do Parque, na ordem da entrada para a saída do
+Parque.
+Cada linha contém dois inteiros $V_i$ e $A_i$ ($-20 \leq V_i, A_i \leq 20$, $V_i
+\times A_i < 0$). Se $V_i < 0$, a atração cobra $|V_i|$ \textit{tickets}
+verdes como entrada, e, se visitada, lhe presenteia com $A_i$ \textit{tickets}
+amarelos. Caso contrário, ela cobra $|A_i|$ \textit{tickets} amarelos, e, se
+visitada, lhe presenteia com $V_i$ \textit{tickets} verdes.
+
+\subsection*{Saída}
+
+Imprima uma linha contendo a quantidade máxima de atrações que podem ser
+visitadas.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3
+10 0
+-10 5
+-5 4
+20 -5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+2
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

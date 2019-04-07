@@ -1,0 +1,83 @@
+\textit{Analógimôn Go} é um jogo bastante popular.
+Os jogadores de \textit{Analógimôn Go} são divididos em três grandes
+times: Time \textit{Valor}, Time \textit{Instinto} e Time \textit{Místico}, que
+são liderados pelos seus líderes Kandera, Esparky e Blanque, respectivamente.
+Naturalmente, você faz parte de um desses times!
+
+O líder do seu time está sendo acusado de infringir as regras do jogo por
+gerenciar incorretamente os doces recebidos do Professor que são destinados ao
+time. Isto criou uma grande polêmica dentro da equipe: alguns jogadores defendem
+que o líder realmente agiu incorretamente e deve sofrer um \textit{impeachment}
+e ser afastado de seu cargo, enquanto outros defendem que ele não infringiu as
+regras, que a acusação é inverídica e que ele deve continuar no cargo.
+
+Para resolver a situação, uma votação será realizada entre todos os $N$
+jogadores do seu time. Cada jogador deverá votar se o \textit{impeachment} deve
+ou não ocorrer. Se o número de votos favoráveis ao \textit{impeachment} foi
+maior ou igual a 2/3 (dois terços) do total de jogadores, o líder será afastado.
+Caso contrário, a acusação é arquivada e ele continuará no cargo.
+
+Dados os votos de todos os jogadores, determine o resultado da votação.
+
+\subsection*{Entrada}
+
+A primeira linha contém o inteiro $N$ ($1 \leq N \leq 10^5$), o número de
+jogadores em seu time.
+A próxima linha contém $N$ inteiros $v_1$, ..., $v_N$ ($v_i = 0$ ou $1$),
+indicando os votos dos jogadores. O valor $1$ indica um voto favorável ao
+\textit{impeachment}, enquanto o valor $0$ indica um voto contrário ao mesmo.
+
+\subsection*{Saída}
+
+Imprima uma linha contendo a palavra \verb|impeachment| se o líder deve
+ser afastado de seu cargo, ou \verb|acusacao arquivada| caso contrário.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+6
+1 0 1 1 0 1
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+impeachment
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+5
+0 1 1 1 0
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+acusacao arquivada
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}

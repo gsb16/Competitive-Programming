@@ -1,0 +1,73 @@
+\textit{Analógimôn Go} é um jogo bastante popular. Em sua jornada, o jogador percorre diversas
+cidades capturando pequenos monstrinhos virtuais, chamados \textit{analógimôns}.
+As cidades contém localidades especiais chamadas de
+\textit{ginásios}. Ao chegar a um ginásio, um jogador pode \textit{tentar}
+colocar um de seus analógimôns dentro dele.
+
+Cada anlógimôn tem dois inteiros associados a ele: seu \textit{Poder de Combate}
+(PC) e seu \textit{Número de Ataques} (NA). Além disso, um ginásio tem associado
+a ele um \textit{Intervalo de Poder} (IP). Ao tentar colocar um
+analógimôn em um ginásio, o jogo verifica quantos são os analógimôns já
+presentes no ginásio cuja diferença do seu PC para o PC do analógimôn sendo
+colocado é de no máximo IP. Se esta quantidade for menor ou igual
+ao NA do analógimôn sendo colocado, o monstrinho é inserido no ginásio com
+sucesso. Caso contrário, ele não é colocado no ginásio.
+Em ambos os casos, os analógimôns que já estavam no ginásio
+continuam no ginásio.
+Como exemplo, considere um ginásio com IP=$3$ com analógimôns de PC iguais a
+$5$, $8$,
+$13$ e $20$. Se um jogador tenta colocar um analógimôn de PC=$10$ e NA=$4$, o jogo
+contará quantos analógimôns há no ginásio com PC entre $10-3 = 7$ e $10+3 = 13$,
+inclusive. Como há dois analógimôns neste caso, o monstrinho é colocado com
+sucesso no ginásio, pois $2 \leq 4$. O ginásio passa a conter analógimôns de PC
+iguais a $5$, $8$, $10$, $13$ e $20$.
+
+Dadas as informações sobre um ginásio e as tentativas de colocar analógimôns
+dentro dele, determine quantos analógimôns ficarão no ginásio após todas as
+tentativas. Considere que o ginásio inicialmente não contém nenhum analógimôn.
+
+\subsection*{Entrada}
+
+A primeira linha contém os inteiros $IP$ e $M$ ($1 \leq IP, M \leq 10^5$), o
+IP do ginásio e o número de tentativas, respectivamente.
+As próximas $M$ linhas descrevem as tentativas de colocar um analógimôn no
+ginásio, na ordem em que são feitas. Cada linha contém dois inteiros $PC$ e $NA$
+($1 \leq PC, NA \leq 10^5$), indicando o PC e o NA
+do analógimôn, respectivamente. O Poder de Combate de todos analógimôns são
+distintos.
+
+\subsection*{Saída}
+
+Imprima uma linha com um inteiro indicando quantos analógimôns
+ficarão no ginásio.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de entrada}
+\begin{verbatim}
+3 7
+5 2
+13 1
+8 1
+20 5
+6 1
+11 1
+10 4
+\end{verbatim}
+\vspace{1mm}
+\end{minipage}
+&
+
+\begin{minipage}[t]{3in}
+\textbf{Exemplo de saída}
+\begin{verbatim}
+5
+\end{verbatim}
+\vspace{1mm}
+\end{minipage} \\
+\hline
+\end{tabular}
+\end{table}
